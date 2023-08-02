@@ -1,4 +1,40 @@
-body{
-    background: black;
-    color: white;
+/* Estilos generales del encabezado */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Estilos del logotipo */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Estilos del menú */
+.menu {
+    margin-left: auto;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+/* Estilos del enlace de contacto */
+.contact-link {
+    color: #fff;
+    text-decoration: none;
 }
