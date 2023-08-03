@@ -22,14 +22,33 @@
             </nav>
         </header>
     </div>
-    <div class="bajada">
-        <div class="container">
-            <h1 class="entry-title">Ramos</h1>	
-            <!--Se me ocurre agregar botone acá eligiendo malla o electivo y el listado desplegable -->
+    <div class="subencabezado">
+        <h1>WELCOME TO RAMOS INDUSTRIAS</h1>
+        <div class="boton">
+            <div class="btn-container">
+                <input type="radio" id="btn-switch-malla" name="unosolo" onclick="unosolo('btn-switch-malla')"> Malla (v5)
+                <label for="btn-switch-malla" class="lbl-switch"></label>
+              </div>
+              
+              <div class="btn-container">
+                <p>Electivo Especialidad</p>
+                <input type="radio" id="btn-switch-electivo" name="unosolo" onclick="unosolo('btn-switch-electivo')"> 
+                <label for="btn-switch-electivo" class="lbl-switch"></label>
+              </div>
+              
+              <script>
+                function unosolo(value) {
+                  const radios = document.getElementsByName("unosolo");
+                  radios.forEach(radio => {
+                    if (radio.id !== value) {
+                      radio.checked = false;
+                    }
+                  });
+                }
+              </script>
+
         </div>
     </div>
-    <h1>WELCOME TO ramos.cein</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla reiciendis cupiditate provident quisquam suscipit perspiciatis, necessitatibus, totam quas, quae at deserunt magnam ab? Natus consequatur laboriosam temporibus atque repudiandae inventore.</p>
 
 </body>
 </html>

@@ -7,6 +7,8 @@ body{
     color: #292b2c;
 }
 
+/* ENCABEZADO: inicio */
+
 /* Estilos generales del encabezado */
 header {
     display: flex;
@@ -52,10 +54,85 @@ header {
     margin-left: 100px;
 }
 
-.bajada {
+
+
+/* ENCABEZADO: termino */
+
+
+/* SUBENCABEZADO:inicio */
+
+.subencabezado {
     padding: 30px 0px;
     border-top: 1px solid #e9e9e9;
     background: #f8f9f9;
     border-bottom: 1px solid #e9e9e9;
     position: relative;
 }
+
+.subencabezado div{
+    font-size: larger;
+}
+
+    /* BOTONES: inicio */
+
+.boton {
+    margin-left: 196.5px;
+  }
+
+  .btn-container {
+    margin-bottom: 10px;
+  }
+
+  .lbl-switch {
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    background: #aaa;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  #btn-switch-malla:checked ~ .lbl-switch {
+    background: #61a0ff;
+  }
+
+  #btn-switch-electivo:checked ~ .lbl-switch {
+    background: #61a0ff;
+  }
+
+  #btn-switch-malla:checked ~ .lbl-switch::after {
+    left: 28px; /* Mueve el botón v5 hacia la derecha */
+  }
+
+  #btn-switch-electivo:checked ~ .lbl-switch::after {
+    left: 28px; /* Mueve el botón Electivo hacia la derecha */
+  }
+
+  .lbl-switch::after {
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px; /* Inicialmente ambos botones están a la izquierda */
+    transition: 0.2s;
+  }
+
+  #btn-switch-malla:checked ~ .lbl-switch::after,
+  #btn-switch-electivo:checked ~ .lbl-switch::after {
+    left: 28px; /* Mueve el botón hacia la derecha cuando está seleccionado */
+  }
+
+  #btn-switch-malla,
+  #btn-switch-electivo {
+    display: none;
+  }
+  
+  
+     /* BOTONES:termino */
+  
+ /* SUBENCABEZADO:inicio */
