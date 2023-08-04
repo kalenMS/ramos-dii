@@ -23,32 +23,39 @@
         </header>
     </div>
     <div class="subencabezado">
-        <h1>OPINIONES RAMOS</h1>
-        <div class="boton">
-            <article class="btn-container">
-              <p>Malla (v5)</p>
-                <input type="radio" id="btn-switch-malla" name="unosolo" onclick="unosolo('btn-switch-malla')"> 
-                <label for="btn-switch-malla" class="lbl-switch"></label>
-            </article>
+      <h1>OPINIONES RAMOS</h1>
+      <div class="boton">
+          <article class="btn-container">
+            <p>Malla (v5)</p>
+            <input type="radio" id="btn-switch-malla" name="unosolo" onclick="unosolo('btn-switch-malla')"> 
+            <label for="btn-switch-malla" class="lbl-switch"></label>
+          </article>
               
-            <article class="btn-container">
-                <p>Electivo Especialidad</p>
-                <input type="radio" id="btn-switch-electivo" name="unosolo" onclick="unosolo('btn-switch-electivo')"> 
-                <label for="btn-switch-electivo" class="lbl-switch"></label>
-            </article>
-              
-              <script>
-                function unosolo(value) {
-                  const radios = document.getElementsByName("unosolo");
-                  radios.forEach(radio => {
-                    if (radio.id !== value) {
-                      radio.checked = false;
-                    }
-                  });
-                }
-              </script>
+          <article class="btn-container">
+            <p>Electivos</p>
+            <input type="radio" id="btn-switch-electivo" name="unosolo" onclick="unosolo('btn-switch-electivo')"> 
+            <label for="btn-switch-electivo" class="lbl-switch"></label>
+          </article>
+      </div>   
+      
+      <article id="lista_ramos">
+        <select onchange="getRamo(this.options[this.selectedIndex].value)" style="width: 250px;">
+          <option value="" disabled="" hidden="">---------------------------------</option>
+        </select>
+      </article>   
+        
+      <script>
+        function unosolo(value) {
+          const radios = document.getElementsByName("unosolo");
+          radios.forEach(radio => {
+            if (radio.id !== value) {
+              radio.checked = false;
+            }
+          });
+        }
+      </script>
 
-        </div>
+      
     </div>
 
 </body>
