@@ -50,7 +50,6 @@ header {
     text-decoration: none;
     zoom: 1;
     letter-spacing: 1px;
-    margin-bottom: 12px;
 }
 
 .menu a:hover {
@@ -77,12 +76,13 @@ header {
   border-top: 1px solid #e9e9e9;
   background: #f8f9f9;
   border-bottom: 1px solid #e9e9e9;
-  justify-content: space-between;
 }
 
-/* .subencabezado h1{
-  border: 1px solid blue;
-} */
+.subencabezado h1{
+  /* border: 1px solid blue; */
+  padding: 0 10%;
+  text-align: center;
+}
 
 .subencabezado article{
     font-size: medium;
@@ -154,9 +154,29 @@ header {
      
      /* LISTA DESPLEGABLE:inicio */
 
-  /* #lista_ramos{
-    border: 1px solid red;
-    } */
-    
+.menu_ramos{
+  /* border: 1px solid red; */
+  padding: 0% 15px;
+  }
   
- /* SUBENCABEZADO:inicio */
+  .lista_ramos{
+    width: 250px;
+    border-radius: 7px;
+    font-size: medium;
+  }
+  
+.lista_ramos::part(listbox){
+  padding: 2px;
+  border-radius: 7px;
+}
+
+.lista_ramos option{
+  text-align: center;
+}
+
+
+
+     /* LISTA DESPLEGABLE:termino */
+
+
+ /* SUBENCABEZADO:termino */

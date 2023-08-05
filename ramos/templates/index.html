@@ -23,10 +23,10 @@
         </header>
     </div>
     <div class="subencabezado">
-      <h1>OPINIONES RAMOS</h1>
+      <h1>Ramos Industriales</h1>
       <div class="boton">
           <article class="btn-container">
-            <p>Malla (v5)</p>
+            <p>Malla[v5]</p>
             <input type="radio" id="btn-switch-malla" name="unosolo" onclick="unosolo('btn-switch-malla')"> 
             <label for="btn-switch-malla" class="lbl-switch"></label>
           </article>
@@ -38,9 +38,9 @@
           </article>
       </div>   
       
-      <article id="lista_ramos">
-        <select onchange="getRamo(this.options[this.selectedIndex].value)" style="width: 250px;">
-          <option value="" disabled="" hidden="">---------------------------------</option>
+      <article class="menu_ramos">
+        <select class='lista_ramos'> 
+          <option value="" disabled selected hidden>Seleccione su opción</option>  
         </select>
       </article>   
         
@@ -53,8 +53,27 @@
             }
           });
         }
-      </script>
 
+        // Actualizar el estado de las variables globales en función del botón seleccionado
+        const value = document.querySelector("input[name='value']").value;
+        
+        if (value === "btn-switch-malla") {
+          document.querySelector(".lista_ramos").innerHTML = `
+            <option value="" disabled selected hidden>Seleccione su opción</option>
+            <option value="opcion1">Opción 1</option>
+          `;
+        } else if (value === "btn-switch-electivo") {
+          document.querySelector(".lista_ramos").innerHTML = `
+            <option value="" disabled selected hidden>Seleccione su opción</option>
+            <option value="opcion2">Opción 2</option>
+          `;
+        }
+
+
+
+      </script>
+      
+      
       
     </div>
 
