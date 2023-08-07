@@ -20,5 +20,6 @@ from ramos.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index)
+    path('', index) #,
+    # path('ramo_query/<int:value_id>/', usuarios_views.ramo_query, name="ramo_query")
 ]

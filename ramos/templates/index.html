@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramos Industrias</title>
     <link rel="stylesheet" href="{% static '/styles/main.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
 
 </head>
 <body>
@@ -24,56 +25,32 @@
     </div>
     <div class="subencabezado">
       <h1>Ramos Industriales</h1>
-      <div class="boton">
+      <form class="boton">
           <article class="btn-container">
             <p>Malla[v5]</p>
-            <input type="radio" id="btn-switch-malla" name="unosolo" onclick="unosolo('btn-switch-malla')"> 
+            <input type="radio" id="btn-switch-malla" name="unosolo"> 
             <label for="btn-switch-malla" class="lbl-switch"></label>
           </article>
               
           <article class="btn-container">
             <p>Electivos</p>
-            <input type="radio" id="btn-switch-electivo" name="unosolo" onclick="unosolo('btn-switch-electivo')"> 
+            <input type="radio" id="btn-switch-electivo" name="unosolo"> 
             <label for="btn-switch-electivo" class="lbl-switch"></label>
           </article>
-      </div>   
+        </form>   
       
       <article class="menu_ramos">
         <select class='lista_ramos'> 
-          <option value="" disabled selected hidden>Seleccione su opción</option>  
+          <option value="" disabled selected hidden>Seleccione su opción</option>
+
+          
+
+          <option id="option-electivo" style="display: none;">Electivos</option> 
+
         </select>
       </article>   
         
-      <script>
-        function unosolo(value) {
-          const radios = document.getElementsByName("unosolo");
-          radios.forEach(radio => {
-            if (radio.id !== value) {
-              radio.checked = false;
-            }
-          });
-        }
-
-        // Actualizar el estado de las variables globales en función del botón seleccionado
-        const value = document.querySelector("input[name='value']").value;
-        
-        if (value === "btn-switch-malla") {
-          document.querySelector(".lista_ramos").innerHTML = `
-            <option value="" disabled selected hidden>Seleccione su opción</option>
-            <option value="opcion1">Opción 1</option>
-          `;
-        } else if (value === "btn-switch-electivo") {
-          document.querySelector(".lista_ramos").innerHTML = `
-            <option value="" disabled selected hidden>Seleccione su opción</option>
-            <option value="opcion2">Opción 2</option>
-          `;
-        }
-
-
-
-      </script>
-      
-      
+       
       
     </div>
 
