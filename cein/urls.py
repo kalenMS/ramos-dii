@@ -22,5 +22,5 @@ from ramos.views import index, ramo_query
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('ramo_query/<int:value_id>/',ramo_query, name="ramo_query")
+    path('ramo_query/<int:value_id>/',ramo_query, name='ramo_query')
 ]
