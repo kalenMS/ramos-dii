@@ -3,18 +3,18 @@ function malla_check(value) {
     url: '/ramo_query/' + value + '/',
     method: 'GET',
     success: function(response) {
-      console.log("Esta parte a funcionado")
+      console.log(response.ramos_info)
       // response.ramos123
-      // dentro de un for, ie for ramos in ramos123:
+      // dentro de un for, ie for ramos in ramos_info:
       
       selector = document.getElementById('ramo_select');
                               
       // Se crea el elemento option para añadirlo al final del ramos select
       var option = document.createElement("option");
       // id para crear la 2da funcion que se encarga de obtener los comentarios del ramo
-      option.value = Ramos.codigo;
+      option.value = response.ramos_info.codigo;
       // Nombre que se muestra en el selector de ramos
-      option.innerText = Ramos.nombre;
+      option.innerText = response.info.nombre;
 
       selector.appendChild(option);
       // fin del for
