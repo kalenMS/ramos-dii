@@ -7,8 +7,12 @@ class Ramos(models.Model):
     nombre = models.CharField(max_length=50)
  
     VERSION_CHOICES = [
-        ('1', 'Malla V5'),
-        ('0', 'Electivo')
+        ('0', 'Malla V5'),
+        ('1', 'Electivo'),
+        ('2', 'Especialización')
     ]
     
     version = models.CharField(max_length=10, choices=VERSION_CHOICES, default='Malla V5')
+    def __str__(self):
+        texto = "{0} ({1})"
+        return texto.format(self.nombre, self.version)

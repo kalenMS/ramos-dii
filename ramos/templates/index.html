@@ -12,7 +12,7 @@
     <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
-  
+
     <div class="encabezado">
         <header role="banner">
             <a href="https://www.cein.cl/" target="_blank">
@@ -27,19 +27,24 @@
     </div>
 
     <div class="subencabezado">
-      <h1>Ramos Industriales</h1>
+      <h1 >Ingeniería Civil Industrial</h1>
       <form class="boton">
           <article class="btn-container">
-            <p>Malla[v5]</p>
-            <input id="btn-switch-malla" type="radio" name="unosolo" value="1" onclick="malla_check(this.value)"> 
+            <p style="font-weight: bold;">Malla[v5]</p>
+            <input id="btn-switch-malla" type="radio" name="unosolo" value="0" onclick="list_function(this.value)"> 
             <label for="btn-switch-malla" class="lbl-switch"></label>
           </article>
               
           <article class="btn-container">
-            <p>Electivos</p>
-            <input id="btn-switch-electivo" type="radio" name="unosolo" value="0" onclick="malla_check(this.value)"> 
+            <p style="font-weight: bold;">Electivos</p>
+            <input id="btn-switch-electivo" type="radio" name="unosolo" value="1" onclick="list_function(this.value)"> 
             <label for="btn-switch-electivo" class="lbl-switch"></label>
           </article>
+          <article class="btn-container">
+            <p style="font-weight: bold;">Especializacion</p>
+            <input id="btn-switch-espec" type="radio" name="unosolo" value="2" onclick="list_function(this.value)">
+            <label for="btn-switch-espec" class="lbl-switch"></label>
+        </article>
         </form>   
 
       <article class="menu_ramos">

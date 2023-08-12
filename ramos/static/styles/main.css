@@ -1,5 +1,5 @@
-body{
-  background:white;
+body {
+  background: white;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
@@ -13,22 +13,25 @@ body{
 /* Estilos generales del encabezado */
 
 header {
-  display: flex; /* Cada elemento uno al lado del otro */
-  padding: 1px 13%; /* {0;margenes arriba abajo, 1;margenes derecha izquierda} */
-  position:relative;
+  display: flex;
+  /* Cada elemento uno al lado del otro */
+  padding: 1px 13%;
+  /* {0;margenes arriba abajo, 1;margenes derecha izquierda} */
+  position: relative;
   z-index: 1000;
   align-items: center;
   text-decoration: none;
-  border: none; /* Elimina el borde del div */
+  border: none;
+  /* Elimina el borde del div */
   height: 68px;
   justify-content: space-between;
 }
 
-@media (max-width:150px){
-  header{
+@media (max-width:150px) {
+  header {
     flex-direction: column;
     display: inline-block;
-    
+
   }
 }
 
@@ -39,30 +42,30 @@ header {
 }
 
 .menu a {
-    display: inline-block;
-    text-decoration: none;
-    color: #777777;
-    /* estilo de letra de la pagina principal */
-    font-family: "Raleway", Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    zoom: 1;
-    letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  color: #777777;
+  /* estilo de letra de la pagina principal */
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  zoom: 1;
+  letter-spacing: 1px;
 }
 
 .menu a:hover {
-    color: #3cb4e0;
-  }
+  color: #3cb4e0;
+}
 
 /* ENCABEZADO: termino */
 
 
 /* SUBENCABEZADO:inicio */
 
-@media (max-width:900px){
-  .subencabezado{
+@media (max-width:900px) {
+  .subencabezado {
     flex-direction: column;
     display: inline-block;
   }
@@ -70,113 +73,130 @@ header {
 
 .subencabezado {
   position: relative;
-  align-items: center; /* elementos centrados en el bloque */
-  display: flex; /* Cada elemento uno al lado del otro */
-  padding: 19px 13%; /* {0:margenes arriba abajo, 1:margenes derecha izquierda} */
+  align-items: center;
+  /* elementos centrados en el bloque */
+  display: flex;
+  /* Cada elemento uno al lado del otro */
+  padding: 19px 13%;
+  /* {0:margenes arriba abajo, 1:margenes derecha izquierda} */
   border-top: 1px solid #e9e9e9;
   background: #f8f9f9;
   border-bottom: 1px solid #e9e9e9;
 }
 
-.subencabezado h1{
+.subencabezado h1 {
   /* border: 1px solid blue; */
-  padding: 0 10%;
+  padding: 0 5%;
   text-align: center;
 }
 
-.subencabezado article{
-    font-size: medium;
+.subencabezado article {
+  font-size: medium;
 }
 
-    /* BOTONES: inicio */
+/* BOTONES: inicio */
 
 .boton {
-    display: flex;
-  }
+  display: flex;
+}
 
 .btn-container {
-    margin-bottom: 10px;
-    /* border: 1px solid green; */
-    padding: 0% 15px;
-  }
-
-  .lbl-switch {
-    display: inline-block;
-    width: 55px;
-    height: 30px;
-    background: #aaa;
-    border-radius: 100px;
-    position: relative;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-
-  #btn-switch-malla:checked ~ .lbl-switch {
-    background: #61a0ff;
-  }
-
-  #btn-switch-electivo:checked ~ .lbl-switch {
-    background: #61a0ff;
-  }
-
-  #btn-switch-malla:checked ~ .lbl-switch::after {
-    left: 28px; /* Mueve el botón v5 hacia la derecha */
-  }
-
-  #btn-switch-electivo:checked ~ .lbl-switch::after {
-    left: 28px; /* Mueve el botón Electivo hacia la derecha */
-  }
-
-  .lbl-switch::after {
-    position: absolute;
-    content: '';
-    width: 22px;
-    height: 22px;
-    background: #fff;
-    border-radius: 100px;
-    top: 4px;
-    left: 5px; /* Inicialmente ambos botones están a la izquierda */
-    transition: 0.2s;
-  }
-
-  #btn-switch-malla:checked ~ .lbl-switch::after,
-  #btn-switch-electivo:checked ~ .lbl-switch::after {
-    left: 28px; /* Mueve el botón hacia la derecha cuando está seleccionado */
-  }
-
-  #btn-switch-malla,
-  #btn-switch-electivo {
-    display: none;
-  }
-  
-  
-     /* BOTONES:termino */
-     
-     /* LISTA DESPLEGABLE:inicio */
-
-.menu_ramos{
-  /* border: 1px solid red; */
+  margin-bottom: 10px;
   padding: 0% 15px;
-  }
-  
-  .lista_ramos{
-    width: 250px;
-    border-radius: 7px;
-    font-size: medium;
-  }
-  
-.lista_ramos::part(listbox){
+}
+
+.lbl-switch {
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  background: #aaa;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#btn-switch-malla:checked~.lbl-switch {
+  background: #61a0ff;
+}
+
+#btn-switch-electivo:checked~.lbl-switch {
+  background: #61a0ff;
+}
+
+#btn-switch-espec:checked~.lbl-switch {
+  background: #61a0ff;
+}
+
+#btn-switch-malla:checked~.lbl-switch::after {
+  left: 28px;
+  /* Mueve el botón v5 hacia la derecha */
+}
+
+#btn-switch-electivo:checked~.lbl-switch::after {
+  left: 28px;
+  /* Mueve el botón Electivo hacia la derecha */
+}
+
+#btn-switch-espec:checked~.lbl-switch::after {
+  left: 28px;
+  /* Mueve el botón v5 hacia la derecha */
+}
+
+.lbl-switch::after {
+  position: absolute;
+  content: '';
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 100px;
+  top: 4px;
+  left: 5px;
+  /* Inicialmente ambos botones están a la izquierda */
+  transition: 0.2s;
+}
+
+#btn-switch-malla:checked~.lbl-switch::after,
+#btn-switch-electivo:checked~.lbl-switch::after,
+#btn-switch-espec:checked~.lbl-switch::after
+{
+  left: 28px;
+  /* Mueve el botón hacia la derecha cuando está seleccionado */
+}
+
+#btn-switch-malla,
+#btn-switch-electivo,
+#btn-switch-espec{
+  display: none;
+}
+
+
+/* BOTONES:termino */
+
+/* LISTA DESPLEGABLE:inicio */
+
+.menu_ramos {
+  padding: 0% 15px;
+}
+
+.lista_ramos {
+  width: 250px;
+  border-radius: 7px;
+  font-size: medium;
+}
+
+.lista_ramos::part(listbox) {
   padding: 2px;
   border-radius: 7px;
 }
 
-.lista_ramos option{
-  text-align: center;
+.lista_ramos option {
+  text-align: left;
 }
 
 
 
-     /* LISTA DESPLEGABLE:termino */
+/* LISTA DESPLEGABLE:termino */
 
 
- /* SUBENCABEZADO:termino */
+/* SUBENCABEZADO:termino */
