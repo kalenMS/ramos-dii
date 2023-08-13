@@ -1,8 +1,8 @@
 function list_function(value) {
   var selector = document.getElementById('ramo_select');
-
   // Limpiar el selector antes de agregar nuevas opciones
   selector.innerHTML = '';
+
   let ramo_select = $('#ramo_select')
   ramo_select.append($('<option />').val("").text("Seleccione su opción"));
   let ramo_select_option = $('#ramo_select option[value=""]')
@@ -32,3 +32,5 @@ function list_function(value) {
     });
   }
 }
+
+

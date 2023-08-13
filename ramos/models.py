@@ -14,5 +14,13 @@ class Ramos(models.Model):
     
     version = models.CharField(max_length=10, choices=VERSION_CHOICES, default='Malla V5')
     def __str__(self):
-        texto = "{0} ({1})"
-        return texto.format(self.nombre, self.version)
+        texto = "{0} {1}"
+        return texto.format(self.codigo, self.nombre)
+
+class Contenido(models.Model):
+    fecha = models.CharField(max_length=50)
+    curso = models.CharField(max_length=50)
+    dificultad = models.IntegerField()
+    tiempo = models.IntegerField()
+    comentario = models.CharField(max_length=900)
+    
