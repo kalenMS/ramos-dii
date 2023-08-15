@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ramos.views import index, ramo_query
+from ramos.views import index, ramo_query, content_query
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('ramo_query/<int:value_id>/',ramo_query, name='ramo_query')
+    path('ramo_query/<int:value_id>/',ramo_query, name='ramo_query'),
+    path('content_query/<str:value_name>/', content_query, name='content_query')
 ]

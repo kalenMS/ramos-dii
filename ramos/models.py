@@ -17,9 +17,11 @@ class Ramos(models.Model):
         texto = "{0} {1}"
         return texto.format(self.codigo, self.nombre)
 
+
+
 class Contenido(models.Model):
     fecha = models.CharField(max_length=50)
-    curso = models.CharField(max_length=50)
+    curso = models.ForeignKey(Ramos, on_delete=models.CASCADE)
     dificultad = models.IntegerField()
     tiempo = models.IntegerField()
     comentario = models.CharField(max_length=900)
