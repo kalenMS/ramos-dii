@@ -2,62 +2,79 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramos Industrias</title>
-    <link rel="stylesheet" href="{% static '/styles/main.css' %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-    <script src="{% static 'js/main.js' %}"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramos Industrias</title>
+  <link rel="stylesheet" href="{% static '/styles/main.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="{% static 'js/main.js' %}"></script>
 </head>
+
 <body>
 
-    <div class="encabezado">
-        <header role="banner">
-            <a href="https://www.cein.cl/" target="_blank">
-                <img class="logo" src="https://www.cein.cl/wp-content/uploads/2019/03/cropped-CEIN-1.png"  alt="Centro de Estudiantes de Ingeniería Industrial" srcset="https://www.cein.cl/wp-content/uploads/2019/03/CEIN.png 2x">
-            </a>
-            <nav class="menu">
-                <ul>
-                    <a href="https://www.cein.cl/contacto/" target="_blank">Contacto</a>
-                </ul>
-            </nav>
-        </header>
-    </div>
+  <div class="encabezado">
+    <header role="banner">
+      <a href="https://www.cein.cl/" target="_blank">
+        <img class="logo" src="https://www.cein.cl/wp-content/uploads/2019/03/cropped-CEIN-1.png"
+          alt="Centro de Estudiantes de Ingeniería Industrial"
+          srcset="https://www.cein.cl/wp-content/uploads/2019/03/CEIN.png 2x">
+      </a>
+      <nav class="menu">
+        <ul>
+          <a href="https://www.cein.cl/contacto/" target="_blank">Contacto</a>
+        </ul>
+      </nav>
+    </header>
+  </div>
 
-    <div class="subencabezado">
-      <h1 >Ingeniería Civil Industrial</h1>
-      <form class="boton">
-          <article class="btn-container">
-            <p style="font-weight: bold;">Malla[v5]</p>
-            <input id="btn-switch-malla" type="radio" name="unosolo" value="0" onclick="list_function(this.value)"> 
-            <label for="btn-switch-malla" class="lbl-switch"></label>
-          </article>
-              
-          <article class="btn-container">
-            <p style="font-weight: bold;">Electivos</p>
-            <input id="btn-switch-electivo" type="radio" name="unosolo" value="1" onclick="list_function(this.value)"> 
-            <label for="btn-switch-electivo" class="lbl-switch"></label>
-          </article>
-          <article class="btn-container">
-            <p style="font-weight: bold;">Especializacion</p>
-            <input id="btn-switch-espec" type="radio" name="unosolo" value="2" onclick="list_function(this.value)">
-            <label for="btn-switch-espec" class="lbl-switch"></label>
-        </article>
-        </form>   
+  <div class="subencabezado">
+    <h1>Ingeniería Civil Industrial</h1>
+    <form class="boton">
+      <article class="btn-contenedor">
+        <p style="font-weight: bold;">Malla[v5]</p>
+        <input id="btn-switch-malla" type="radio" name="unosolo" value="0" onclick="list_function(this.value)">
+        <label for="btn-switch-malla" class="lbl-cambio"></label>
+      </article>
 
-      <article class="menu_ramos">
-        <select class='lista_ramos' id="ramo_select" onchange="content_function(this.options[this.selectedIndex].value)"> 
-          <option value="" disabled selected hidden>Seleccione su opción</option>
-        </select>
-      </article>   
-    </div>
+      <article class="btn-contenedor">
+        <p style="font-weight: bold;">Electivos</p>
+        <input id="btn-switch-electivo" type="radio" name="unosolo" value="1" onclick="list_function(this.value)">
+        <label for="btn-switch-electivo" class="lbl-cambio"></label>
+      </article>
+      <article class="btn-contenedor">
+        <p style="font-weight: bold;">Especializacion</p>
+        <input id="btn-switch-espec" type="radio" name="unosolo" value="2" onclick="list_function(this.value)">
+        <label for="btn-switch-espec" class="lbl-cambio"></label>
+      </article>
+    </form>
 
+    <article class="menu_ramos">
+      <select class='lista_ramos' id="ramo_select" onchange="content_function(this.options[this.selectedIndex].value)">
+        <option value="" disabled selected hidden>Seleccione su opción</option>
+      </select>
+    </article>
+  </div>
+
+  <section class="cuerpo">
     <article id="content_ramos">
-      <p>hola</p>
+      <p>PARTE 1</p>
     </article>
 
+    <aside>
+      <p>PARTE 2</p>
+    </aside>
+
+  </section>
+  <footer class="Pie-de-pagina">
+    <p>
+      Centro de Estudiantes de Ingeniería Industrial 2023
+      <br>
+      Sitio Desarrollado por CEIN 2023
+    </p>
+  </footer>
 </body>
 
 </html>

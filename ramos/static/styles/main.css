@@ -64,7 +64,7 @@ header {
 
 /* SUBENCABEZADO:inicio */
 
-@media (max-width:900px) {
+@media (max-width:950px) {
   .subencabezado {
     flex-direction: column;
     display: inline-block;
@@ -100,12 +100,12 @@ header {
   display: flex;
 }
 
-.btn-container {
+.btn-contenedor {
   margin-bottom: 10px;
   padding: 0% 15px;
 }
 
-.lbl-switch {
+.lbl-cambio {
   display: inline-block;
   width: 55px;
   height: 30px;
@@ -116,34 +116,34 @@ header {
   transition: 0.2s;
 }
 
-#btn-switch-malla:checked~.lbl-switch {
+#btn-switch-malla:checked~.lbl-cambio {
   background: #61a0ff;
 }
 
-#btn-switch-electivo:checked~.lbl-switch {
+#btn-switch-electivo:checked~.lbl-cambio {
   background: #61a0ff;
 }
 
-#btn-switch-espec:checked~.lbl-switch {
+#btn-switch-espec:checked~.lbl-cambio {
   background: #61a0ff;
 }
 
-#btn-switch-malla:checked~.lbl-switch::after {
+#btn-switch-malla:checked~.lbl-cambio::after {
   left: 28px;
   /* Mueve el botón v5 hacia la derecha */
 }
 
-#btn-switch-electivo:checked~.lbl-switch::after {
+#btn-switch-electivo:checked~.lbl-cambio::after {
   left: 28px;
   /* Mueve el botón Electivo hacia la derecha */
 }
 
-#btn-switch-espec:checked~.lbl-switch::after {
+#btn-switch-espec:checked~.lbl-cambio::after {
   left: 28px;
   /* Mueve el botón v5 hacia la derecha */
 }
 
-.lbl-switch::after {
+.lbl-cambio::after {
   position: absolute;
   content: '';
   width: 22px;
@@ -156,9 +156,9 @@ header {
   transition: 0.2s;
 }
 
-#btn-switch-malla:checked~.lbl-switch::after,
-#btn-switch-electivo:checked~.lbl-switch::after,
-#btn-switch-espec:checked~.lbl-switch::after
+#btn-switch-malla:checked~.lbl-cambio::after,
+#btn-switch-electivo:checked~.lbl-cambio::after,
+#btn-switch-espec:checked~.lbl-cambio::after
 {
   left: 28px;
   /* Mueve el botón hacia la derecha cuando está seleccionado */
@@ -173,7 +173,7 @@ header {
 
 /* BOTONES:termino */
 
-/* LISTA DESPLEGABLE:inicio */
+  /* LISTA DESPLEGABLE:inicio */
 
 .menu_ramos {
   padding: 0% 15px;
@@ -196,7 +196,26 @@ header {
 
 
 
-/* LISTA DESPLEGABLE:termino */
+  /* LISTA DESPLEGABLE:termino */
 
 
 /* SUBENCABEZADO:termino */
+
+
+/* CUERPO: inicio */
+
+.cuerpo{
+  display: flex;
+  /* Ajuste: Footer siempre abajo */
+  min-height: calc(100vh - 322.5px); 
+}
+
+
+.Pie-de-pagina {
+  position: relative;
+  text-align: center;
+  padding: 15px 0px;
+  background: #222222;
+  font-weight: 500;
+  color: #bbbbbb;
+}
