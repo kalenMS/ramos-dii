@@ -34,7 +34,7 @@ function list_function(value) {
 }
 
 function content_function(value) {
-  var selector = document.getElementById('content_ramos');
+  var selector = document.getElementById('bloque-contenido');
   // Limpiar el selector antes de agregar nuevas opciones
   selector.innerHTML = '';
   {
@@ -42,12 +42,16 @@ function content_function(value) {
       url: '/content_query/' + value + '/',
       method: 'GET',
       success: function (response) {
-        for (const contenido of response.ramos_info) {
-          selector = document.getElementById('content_ramos');
-          var p = document.createElement("p");
-          p.innerText = contenido.comentario;
-          selector.appendChild(p);
-        }
+        selector = document.getElementById('bloque-contenido');
+        var h2 = document.createElement("h2");
+        h2.innerText = value;
+        selector.appendChild(h2);
+        // for (const contenido of response.ramos_info) {
+        //   selector = document.getElementById('content_ramos');
+        //   var p = document.createElement("p");
+        //   p.innerText = contenido.comentario;
+        //   selector.appendChild(p);
+        // }
       }
     });
   }

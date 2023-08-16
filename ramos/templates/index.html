@@ -9,8 +9,10 @@
   <title>Ramos Industrias</title>
   <link rel="stylesheet" href="{% static '/styles/main.css' %}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
   <script src="{% static 'js/main.js' %}"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -24,7 +26,7 @@
       </a>
       <nav class="menu">
         <ul>
-          <a href="https://www.cein.cl/contacto/" target="_blank">Contacto</a>
+          <a class="contacto" href="https://www.cein.cl/contacto/" target="_blank">Contacto</a>
         </ul>
       </nav>
     </header>
@@ -59,22 +61,25 @@
   </div>
 
   <section class="cuerpo">
-    <article id="content_ramos">
-      <p>PARTE 1</p>
-    </article>
-
-    <aside>
-      <p>PARTE 2</p>
-    </aside>
-
+    <div class="container" id="content_ramos">
+      <div class="row">
+        <div class="col-sm-6" id="bloque-contenido"></div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4"></div>
+      </div>
+    </div>
   </section>
-  <footer class="Pie-de-pagina">
-    <p>
-      Centro de Estudiantes de Ingeniería Industrial 2023
-      <br>
-      Sitio Desarrollado por CEIN 2023
-    </p>
-  </footer>
+
+  <div class="container">
+    <footer class="py-3 my-2 border-top">
+      <div>
+        <p class="text-center text-muted">
+          © 2023 Centro de Estudiantes de Ingeniería Industrial
+        </p>
+      </div>
+    </footer>
+  </div>
+
 </body>
 
 </html>
