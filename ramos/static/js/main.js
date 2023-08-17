@@ -34,7 +34,7 @@ function list_function(value) {
 }
 
 function content_function(value) {
-  var selector = document.getElementById('bloque-contenido');
+  var selector = document.getElementById('titulo-ramo');
   // Limpiar el selector antes de agregar nuevas opciones
   selector.innerHTML = '';
   {
@@ -42,7 +42,7 @@ function content_function(value) {
       url: '/content_query/' + value + '/',
       method: 'GET',
       success: function (response) {
-        selector = document.getElementById('bloque-contenido');
+        selector = document.getElementById('titulo-ramo');
         var h2 = document.createElement("h2");
         h2.innerText = value;
         selector.appendChild(h2);

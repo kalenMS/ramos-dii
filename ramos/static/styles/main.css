@@ -216,9 +216,9 @@ header {
 }
 
 .col-sm-8 {
-  border: 1px solid blue;
+  padding: 10px;
 }
 
-.col-sm-4 {
-  border: 1px solid green;
+.col-sm-3 {
+  padding: 10px;
 }
