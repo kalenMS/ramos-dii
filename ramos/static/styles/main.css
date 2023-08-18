@@ -68,7 +68,7 @@ header {
 
 /* SUBENCABEZADO:inicio */
 
-@media (max-width:950px) {
+@media (max-width:1000px) {
   .subencabezado {
     flex-direction: column;
     display: inline-block;
