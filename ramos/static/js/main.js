@@ -52,10 +52,13 @@ function content_function(value) {
       url: '/content_query/' + value + '/',
       method: 'GET',
       success: function (response) {
-        // titulos
+        // titulos el value viene del llamado de la funcion y se pasa el id del ramo nomas, tonce lo q se puede hacer es 
+        // pasar el nombre del ramo a la funcion de javascript o  rescatarlo del elemento desde aca o pasarlo al json desde la vista
+        // lo voy a pasar de la vista yo cacho, esop.
         selector = document.getElementById('titulo-ramo');
         var h2 = document.createElement("h2");
-        h2.innerText = value;
+        // yao
+        h2.innerText = response.codigo_ramo + " " +  response.nombre_ramo; //asi no mais :v
         selector.appendChild(h2);
 
         // Link ucursos profesores

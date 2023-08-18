@@ -18,5 +18,10 @@ def ramo_query(request, value_id):
 
 def content_query(request, value_name):
     contenido = Contenido.objects.filter(curso=value_name)
-    return JsonResponse({"ramos_info": list(contenido.values())})
+    ramo = get_object_or_404(Ramos, id=value_name)
+    nombre_ramo = ramo.nombre
+    codigo_ramo = ramo.codigo
+    return JsonResponse({"ramos_info": list(contenido.values()),
+                         "nombre_ramo": nombre_ramo,
+                         "codigo_ramo": codigo_ramo})
 
