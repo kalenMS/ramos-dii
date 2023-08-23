@@ -88,13 +88,36 @@ header {
   border-bottom: 1px solid #e9e9e9;
 }
 
+.subencabezado_dark {
+  position: relative;
+  align-items: center;
+  /* elementos centrados en el bloque */
+  display: flex;
+  /* Cada elemento uno al lado del otro */
+  padding: 19px 9.5%;
+  /* {0:margenes arriba abajo, 1:margenes derecha izquierda} */
+  border-top: 1px solid #212529;
+  background: #212529;
+  border-bottom: 1px solid #212529;
+}
+
 .subencabezado h1 {
   /* border: 1px solid blue; */
   padding: 0 5%;
   text-align: center;
 }
 
+.subencabezado_dark h1 {
+  /* border: 1px solid blue; */
+  padding: 0 5%;
+  text-align: center;
+}
+
 .subencabezado article {
+  font-size: medium;
+}
+
+.subencabezado_dark article {
   font-size: medium;
 }
 
@@ -215,10 +238,18 @@ header {
   min-height: calc(100vh - 277px); 
 }
 
-.col-sm-8 {
-  padding: 10px;
+#fila-dyt{
+  justify-content: center; 
+  text-align: center; 
+  padding: 10px 0; 
 }
 
-.col-sm-3 {
-  padding: 10px;
+#tiempo p{
+  text-align: center
+}
+
+#fila-profe{
+  justify-content: center; 
+  text-align: center;
+  padding: 10px 0; 
 }
