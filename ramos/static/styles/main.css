@@ -37,8 +37,8 @@ header {
 
 /* Estilos del logotipo */
 .logo {
-  width: 132.1px;
-  height: 40px;
+  width: 190px;
+  height: 170px;
 }
 
 .contacto {
@@ -75,6 +75,13 @@ header {
   }
 }
 
+@media (max-width:1000px) {
+  .subencabezado_dark {
+    flex-direction: column;
+    display: inline-block;
+  }
+}
+
 .subencabezado {
   position: relative;
   align-items: center;
@@ -96,9 +103,9 @@ header {
   /* Cada elemento uno al lado del otro */
   padding: 19px 9.5%;
   /* {0:margenes arriba abajo, 1:margenes derecha izquierda} */
-  border-top: 1px solid #212529;
-  background: #212529;
-  border-bottom: 1px solid #212529;
+  border-top: 1px solid #1b2026;
+  background: #1b2026;
+  border-bottom: 1px solid #1b2026;
 }
 
 .subencabezado h1 {
@@ -120,6 +127,12 @@ header {
 .subencabezado_dark article {
   font-size: medium;
 }
+
+/* botón cambio de tema */
+
+/* #logo-tema{
+  font-size: 10px !important;
+} */
 
 /* BOTONES: inicio */
 
