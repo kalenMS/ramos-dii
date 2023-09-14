@@ -254,7 +254,7 @@ header {
 #fila-dyt{
   justify-content: center; 
   text-align: center; 
-  padding: 10px 0; 
+  padding: 5px 0; 
 }
 
 #tiempo p{
@@ -266,3 +266,20 @@ header {
   text-align: center;
   padding: 10px 0; 
 }
+
+.caja { 
+  font-family: Arial, Helvetica, sans-serif;
+
+  text-align: center; 
+  margin: 0 0 25px; 
+  overflow: hidden; 
+  border-radius: 35px 0px 35px 0px; 
+  -moz-border-radius: 35px 0px 35px 0px; 
+  -webkit-border-radius: 35px 0px 35px 0px; 
+  padding: 3px 10px;
+  border: #2d9cb4b3 5px double;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* CUERPO: termino */

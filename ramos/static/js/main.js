@@ -52,6 +52,10 @@ function content_function(value) {
   var selector3 = document.getElementById('profesores');
   var selector4 = document.getElementById('dificultad');
   var selector5 = document.getElementById('tiempo');
+  var selector6 = document.getElementById('dif-color');
+  var selector7 = document.getElementById('time-color');
+  var selector8 = document.getElementById('dif-fondo');
+  var selector9 = document.getElementById('time-fondo');
 
 
   // Limpiar el contenido del selector antes de agregar nuevas opciones
@@ -60,7 +64,8 @@ function content_function(value) {
   selector3.innerHTML = '';
   selector4.innerHTML = '';
   selector5.innerHTML = '';
-
+  selector8.style = '';
+  selector9.style = '';
   
   $.ajax({
     url: '/content_query/' + value + '/',
@@ -79,7 +84,7 @@ function content_function(value) {
       // Link ucursos profesores
       selector2 = document.getElementById("profesores");
       var a = document.createElement('a');
-      a.href = "https://www.u-cursos.cl/ingenieria/2/encuestas_institucion/resumen_persona?id=6572f3602160e31ad10470aa8b8e82b1";
+      a.href = "https://www.u-cursos.cl/ingenieria/"+ response.codigo_ramo + "/datos_ramo/";
       a.target = "_blank";
       a.innerText = "U-cursos";
       selector2.appendChild(a);
@@ -95,31 +100,61 @@ function content_function(value) {
         total_tiempo = total_tiempo + contenido.tiempo
 
         // Agregar comentarios al elemento 'comentarios'
-        selector = document.getElementById('comentarios');
-        var p1 = document.createElement("p");
-        var p2 = document.createElement("p");
-
-        p1.style = "font-weight: bold;"
-        p1.innerText = contenido.fecha;
-        p2.innerText = contenido.comentario;
-        selector.appendChild(p1);
-        selector.appendChild(p2);
-
+        if (contenido.comentario === "NA") {
+           //nada
+        } else {
+          selector = document.getElementById('comentarios');
+          var p1 = document.createElement("p");
+          var p2 = document.createElement("p");
+  
+          p1.style = "font-weight: bold;"
+          p1.innerText = contenido.fecha;
+          p2.innerText = contenido.comentario;
+          selector.appendChild(p1);
+          selector.appendChild(p2);  
+        }
       }
 
-      // Calcular y agregar la dificultad promedio
-      selector3 = document.getElementById('dificultad');
-      var p = document.createElement("p");
-      p.style = "text-align: center;margin-bottom:auto;";
-      p.innerText = total_dif / conteo + "/5" + " (" + conteo + ")";
-      selector3.appendChild(p);
+      //Cambiar color a letra titulo dificultad y tiempo
+      selector6.style.color = "black";
+      selector7.style.color = "black";
+      
+      //Definir colores para el fondo de dificultad y tiempo
+      const colorMap = {
+        1: "#1ab81f",
+        2: "#5EFF5E",
+        3: "#ffdd1c",
+        4: "#ed6f00",
+        5: "#fa0505"
+      };
 
+      // Calcular y agregar la dificultad promedio
+      var p = document.createElement("p");
+      p.style = "text-align: center;margin-bottom:auto;color:black";
+      let dif = (total_dif / conteo).toFixed(1)
+      p.innerText = dif + "/5" + " (" + conteo + ")";
+      selector4.appendChild(p);
+
+      // Calcular valor redondeado, da el color y cambiar fondo
+      const roundedDif = Math.round(dif);
+      if (colorMap.hasOwnProperty(roundedDif)) {
+        selector8.style.background = colorMap[roundedDif];
+      } else {}
+      
       // Calcular y agregar el tiempo promedio
-      selector4 = document.getElementById('tiempo');
       var p2 = document.createElement("p");
-      p2.style = "text-align: center;margin-bottom:auto;";
-      p2.innerText = total_tiempo / conteo + "/5" + " (" + conteo + ")";
-      selector4.appendChild(p2);
+      p2.style = "text-align: center;margin-bottom:auto;color:black";
+      let time = (total_tiempo/conteo).toFixed(1)
+      p2.innerText = (total_tiempo/conteo).toFixed(1) + "/5" + " (" + conteo + ")";
+      selector5.appendChild(p2);
+
+      // Calcular valor redondeado, da el color y cambiar fondo
+      const roundedtime = Math.round(time);
+      if (colorMap.hasOwnProperty(roundedtime)) {
+        selector9.style.background = colorMap[roundedtime];
+      } else {}
+      
+      
     },
     error: function (xhr, errmsg, err) {
       console.log('Error en la solicitud Ajax: ' + err);
