@@ -268,8 +268,8 @@ header {
 }
 
 .caja { 
-  font-family: Arial, Helvetica, sans-serif;
-
+  font-family:'Times New Roman', Times, serif;
+  font-style: italic;
   text-align: center; 
   margin: 0 0 25px; 
   overflow: hidden; 
@@ -277,9 +277,13 @@ header {
   -moz-border-radius: 35px 0px 35px 0px; 
   -webkit-border-radius: 35px 0px 35px 0px; 
   padding: 3px 10px;
-  border: #2d9cb4b3 5px double;
+  border: #000000 5px double;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+#comentario{
+  text-align: justify;
 }
 
 /* CUERPO: termino */
