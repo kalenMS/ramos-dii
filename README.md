@@ -4,10 +4,22 @@ Esta aplicación web tiene como propósito almacenar y dar una visualización de
 
 ## Instalación 
 
-Crear un entorno virtual para alojar el proyecto
+Crear un entorno virtual para alojar el proyecto en la cmd
 
-`` $python -m venv (nombre)
-``
+~~~
+pip install virtualenv
+$python -m venv (nombre)
+~~~
+Activar el entorno virtual para trabajar
+~~~
+(nombre)/Scripts/activate
+~~~
+Instalar el framework con el que se hizo el proyecto, Python web framework Django.
+~~~
+pip install django
+~~~
+
+El entorno virtual con el que se trabaja cuenta con la versión de python 3.10 
 
 
 ## Uso
