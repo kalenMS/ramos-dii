@@ -4,4 +4,10 @@ Esta aplicación web tiene como propósito almacenar y dar una visualización de
 
 ## Instalación 
 
+Crear un entorno virtual para alojar el proyecto
+
+`` $python -m venv (nombre)
+``
+
+
 ## Uso
